@@ -27,10 +27,20 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+  <properties>
+  	<sesame.version>2.9.0</sesame.version>
+  	<ignore.dep.conflict>true</ignore.dep.conflict>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.universAAL.support</groupId>
       <artifactId>itests</artifactId>
+      <exclusions>
+       <exclusion>
+        <groupId>org.slf4j</groupId>
+       	<artifactId>com.springsource.slf4j.org.apache.commons.logging</artifactId>
+       </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.osgi</groupId>
@@ -43,43 +53,43 @@
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-model</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-repository-api</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-repository-sail</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-sail-nativerdf</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-rio-turtle</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-queryresultio-sparqlxml</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.openrdf.sesame</groupId>
       <artifactId>sesame-rio-rdfxml</artifactId>
-      <version>2.5.1</version>
+      <version>${sesame.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -131,9 +141,10 @@
     <profile>
       <id>uAAL-Runtime</id>
       <dependencies>
-        <dependency>
+	      <dependency>
           <groupId>org.openrdf.sesame</groupId>
           <artifactId>sesame-runtime-osgi</artifactId>
+          <!--2.9.0 is not compatible with iTests -->
           <version>2.6.0</version>
           <scope>provided</scope>
         </dependency>

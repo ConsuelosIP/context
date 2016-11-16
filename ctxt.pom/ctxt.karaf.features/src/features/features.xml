@@ -9,8 +9,27 @@
 	<feature name="uAAL-ctxt.CHe" description="The Context History Entrepot."
 		version="${pom.version}" resolver='(obr)'>
 		<feature>uAAL-Ont.CHe</feature> 
-		<bundle start-level='50' start='true'>mvn:org.openrdf.sesame/sesame-runtime-osgi/2.6.0</bundle>
-		<bundle start-level='51'>wrap:mvn:org.universAAL.context/sesame.uaal.store/${sesame.uaal.store.version}</bundle>
+		<bundle>wrap:mvn:org.slf4j/slf4j-api/1.7.20</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.ops4j.pax.logging/pax-logging-api/1.9.1</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.ops4j.pax.logging/pax-logging-service/1.9.1</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/2.8.4</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.8.4</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/2.8.4</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:ch.qos.logback/logback-core/1.1.7</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:ch.qos.logback/logback-classic/1.1.7</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.github.jsonld-java/jsonld-java/0.8.3</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.apache.httpcomponents/httpcore-osgi/4.4.5</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.apache.httpcomponents/httpclient-osgi/4.5.2</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.google.guava/guava/18.0</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.apache.commons/commons-lang3/3.5</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:commons-io/commons-io/2.5</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:commons-beanutils/commons-beanutils/1.9.3</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:com.opencsv/opencsv/3.8</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.spatial4j/0.4.1_1</bundle>
+		<bundle start-level='50' start='true' dependency="true">mvn:org.mapdb/mapdb/1.0.9</bundle>
+		<bundle start-level='51' start='true' dependency="true">mvn:org.openrdf.sesame/sesame-runtime-osgi/2.9.0</bundle>
+		<bundle start-level='52'>wrap:mvn:org.universAAL.context/sesame.uaal.store/${sesame.uaal.store.version}</bundle>
 		<bundle start-level='70' start='true'>mvn:org.universAAL.context/ctxt.che.module.cardinality/${ctxt.che.module.cardinality.version}</bundle>
 		<bundle start-level='71' start='true'>mvn:org.universAAL.context/ctxt.che/${ctxt.che.version}</bundle>
 	</feature>
