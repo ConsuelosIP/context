@@ -10,8 +10,6 @@
 		version="${pom.version}" resolver='(obr)'>
 		<feature>uAAL-Ont.CHe</feature> 
 		<bundle>wrap:mvn:org.slf4j/slf4j-api/1.7.20</bundle>
-		<bundle start-level='50' start='true' dependency="true">mvn:org.ops4j.pax.logging/pax-logging-api/1.9.1</bundle>
-		<bundle start-level='50' start='true' dependency="true">mvn:org.ops4j.pax.logging/pax-logging-service/1.9.1</bundle>
 		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/2.8.4</bundle>
 		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.8.4</bundle>
 		<bundle start-level='50' start='true' dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/2.8.4</bundle>
